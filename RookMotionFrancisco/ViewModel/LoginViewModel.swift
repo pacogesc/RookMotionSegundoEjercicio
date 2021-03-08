@@ -38,7 +38,7 @@ class LoginViewModel: NSObject {
                 self?.loginViewModelDelegate?.failure("Usuario o contraseña incorrectos")
             }
             if let _ = res {
-                self?.loginViewModelDelegate?.loading()
+                self?.loginViewModelDelegate?.success()
             }
         }
     }

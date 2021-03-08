@@ -25,6 +25,7 @@
 		ADA39A6A25F5A7B3003DC0CD /* FireBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA39A6925F5A7B3003DC0CD /* FireBaseManager.swift */; };
 		ADA39A7E25F5C44E003DC0CD /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA39A7D25F5C44E003DC0CD /* RegisterController.swift */; };
 		ADA39A8225F5C9E7003DC0CD /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA39A8125F5C9E7003DC0CD /* RegisterViewModel.swift */; };
+		ADA39A8625F5E7F8003DC0CD /* UserRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA39A8525F5E7F8003DC0CD /* UserRegister.swift */; };
 		BBBF13F26EC3391553E3EDF2 /* Pods_RookMotionFrancisco.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 369DBE1B05A3E3512AA584AA /* Pods_RookMotionFrancisco.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		ADA39A6925F5A7B3003DC0CD /* FireBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseManager.swift; sourceTree = "<group>"; };
 		ADA39A7D25F5C44E003DC0CD /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		ADA39A8125F5C9E7003DC0CD /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		ADA39A8525F5E7F8003DC0CD /* UserRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegister.swift; sourceTree = "<group>"; };
 		B93D70B54DAE1CD11C6463D6 /* Pods-RookMotionFrancisco.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RookMotionFrancisco.release.xcconfig"; path = "Target Support Files/Pods-RookMotionFrancisco/Pods-RookMotionFrancisco.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				ADA39A4F25F49A6B003DC0CD /* Credentials.swift */,
+				ADA39A8525F5E7F8003DC0CD /* UserRegister.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADA39A8625F5E7F8003DC0CD /* UserRegister.swift in Sources */,
 				ADA39A6A25F5A7B3003DC0CD /* FireBaseManager.swift in Sources */,
 				ADA399F325F467E0003DC0CD /* UIViewControllerExtensions.swift in Sources */,
 				ADA399C725F41073003DC0CD /* ViewController.swift in Sources */,
