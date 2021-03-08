@@ -16,30 +16,38 @@ protocol RegisterViewModelDelegate {
 
 class RegisterViewModel {
     
-    let userRegister: UserRegister
     var registerViewModelDelegate: RegisterViewModelDelegate?
-    var firebaseManager = FireBaseManager()
+    let firebaseManager = FireBaseManager()
     
-    
-    
-    init(userRegister: UserRegister) {
-        self.userRegister = userRegister
+    init() {
     }
     
-    func validateUser() {
-        if userRegister.email.isEmpty || userRegister.name.isEmpty || userRegister.lastName.isEmpty {
-            registerViewModelDelegate?.failure("Faltan campos por llenar")
+    func validateUser(email: String?, password: String?, name: String?, lastName: String?) {
+        registerViewModelDelegate?.loading()
+        if let email = email, let password = password, let name = name, let lastName = lastName, !email.isEmpty && !password.isEmpty && !name.isEmpty && !lastName.isEmpty {
+            let userStore = UserStore(email: email, name: name, lastName: lastName)
+            registerUser(userStore: userStore, password: password)
         } else {
-            registerViewModelDelegate?.loading()
-            firebaseManager.register(email: userRegister.email, password: userRegister.password) { [weak self] (res, err) in
-                if let _ = err {
-                    self?.registerViewModelDelegate?.failure("Usuario o contraseña incorrectos")
-                }
-                if let _ = res {
-                    self?.registerViewModelDelegate?.success()
-                }
+            registerViewModelDelegate?.failure("Faltan campos por llenar")
+        }
+    }
+    
+    private func registerUser(userStore: UserStore, password: String) {
+        firebaseManager.register(email: userStore.email, password: password) { [weak self] (res, err) in
+            if let _ = err {
+                self?.registerViewModelDelegate?.failure("Usuario o contraseña incorrectos")
+            }
+            if let _ = res {
+                self?.registerUserInfo(userStore: userStore)
             }
         }
     }
     
+    private func registerUserInfo(userStore: UserStore) {
+        firebaseManager.storeUserInfo(userStore: userStore, completion:{ [weak self] in
+            self?.registerViewModelDelegate?.success()
+        }, failure: { [weak self] (error) in
+            self?.registerViewModelDelegate?.failure("Erro al registrar la información del usuario")
+        })
+    }
 }

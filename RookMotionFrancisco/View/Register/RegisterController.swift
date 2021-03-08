@@ -17,17 +17,22 @@ class RegisterController: UIViewController {
     let passwordTextInput = TextInput(placeHolder: "Contraseña", keyboardType: .emailAddress, isSecureTextEntry: false, backgroundColor: .white)
     
     let nameTextInput = TextInput(placeHolder: "Nombre(s)", keyboardType: .default, isSecureTextEntry: false, backgroundColor: .white)
-    let lastNamesTextInput = TextInput(placeHolder: "Apellidos", keyboardType: .emailAddress, isSecureTextEntry: true, backgroundColor: .white)
+    let lastNamesTextInput = TextInput(placeHolder: "Apellidos", keyboardType: .emailAddress, isSecureTextEntry: false, backgroundColor: .white)
+    
+    let hud = JGProgressHUD(style: .dark)
     
     lazy var registerButton = UIButton(title: "Registrar", titleColor: .white, font: .boldSystemFont(ofSize: 16), backgroundColor: .clear, target: self, action: #selector(registerTapped))
     
     lazy var loginButton = UIButton(title: "Iniciar sesión", titleColor: .black, font: .boldSystemFont(ofSize: 16), target: self, action: #selector(loginTapped))
+    
+    private let registerViewModel = RegisterViewModel()
     
     //MARK: - Life Cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        registerViewModel.registerViewModelDelegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -46,11 +51,9 @@ class RegisterController: UIViewController {
         passwordTextInput.leadingImageView.image = UIImage(systemName: ImageName.passwordImage)
         
         nameTextInput.isTrailingButtonVisible = false
-        nameTextInput.inputTextField.autocapitalizationType = .none
         nameTextInput.inputTextField.autocorrectionType = .no
         
         lastNamesTextInput.isTrailingButtonVisible = false
-        lastNamesTextInput.inputTextField.autocapitalizationType = .none
         lastNamesTextInput.inputTextField.autocorrectionType = .no
         
         registerButton.roundedButton(cornerRadius: 25, color: .white)
@@ -90,11 +93,28 @@ class RegisterController: UIViewController {
     //MARK: - Selectors
     
     @objc private func registerTapped() {
-        
+        registerViewModel.validateUser(email: userTextInput.inputTextField.text, password: passwordTextInput.inputTextField.text, name: nameTextInput.inputTextField.text, lastName: lastNamesTextInput.inputTextField.text)
     }
     
     @objc private func loginTapped() {
         navigationController?.popToRootViewController(animated: true)
     }
 
+}
+
+
+extension RegisterController: RegisterViewModelDelegate {
+    func success() {
+        hud.indicatorView = JGProgressHUDSuccessIndicatorView()
+        hud.dismiss(afterDelay: 0.2, animated: true)
+    }
+    
+    func failure(_ messaege: String) {
+        hud.dismiss(afterDelay: 0.2, animated: true)
+    }
+    
+    func loading() {
+        hud.indicatorView = JGProgressHUDIndeterminateIndicatorView()
+        hud.show(in: view)
+    }
 }

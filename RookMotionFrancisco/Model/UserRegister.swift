@@ -14,3 +14,9 @@ struct UserRegister {
     let name: String
     let lastName: String
 }
+
+struct UserStore: Encodable {
+    let email: String
+    let name: String
+    let lastName: String
+}

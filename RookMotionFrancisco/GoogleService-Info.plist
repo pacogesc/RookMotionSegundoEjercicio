@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>2760085930-oka357t7frm9r1d8luj67b0shg4mku2s.apps.googleusercontent.com</string>
+	<string>764306093152-7qo65qv5vad95l1c8hongn4j582kf1o2.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.2760085930-oka357t7frm9r1d8luj67b0shg4mku2s</string>
+	<string>com.googleusercontent.apps.764306093152-7qo65qv5vad95l1c8hongn4j582kf1o2</string>
 	<key>API_KEY</key>
-	<string>AIzaSyAoftyK4On6SJMPDDutqD8XnB6nHwm5KU0</string>
+	<string>AIzaSyBJBQHUiGEfUY4bRv5siQe3bnxeHTYFLt4</string>
 	<key>GCM_SENDER_ID</key>
-	<string>2760085930</string>
+	<string>764306093152</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>FranciscoProject.RookMotionFrancisco</string>
 	<key>PROJECT_ID</key>
-	<string>rookmotionejercicio</string>
+	<string>flash-chat-io13-999d9</string>
 	<key>STORAGE_BUCKET</key>
-	<string>rookmotionejercicio.appspot.com</string>
+	<string>flash-chat-io13-999d9.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:2760085930:ios:b8bb53bc62cc3eb6219bd3</string>
+	<string>1:764306093152:ios:d72a068caab982e3453f05</string>
+	<key>DATABASE_URL</key>
+	<string>https://flash-chat-io13-999d9.firebaseio.com</string>
 </dict>
 </plist>

@@ -18,7 +18,6 @@
 		ADA399F325F467E0003DC0CD /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA399F225F467E0003DC0CD /* UIViewControllerExtensions.swift */; };
 		ADA39A0625F46A28003DC0CD /* TextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA39A0525F46A28003DC0CD /* TextInput.swift */; };
 		ADA39A1125F4775B003DC0CD /* ImageName.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA39A1025F4775B003DC0CD /* ImageName.swift */; };
-		ADA39A2B25F4927F003DC0CD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADA39A2A25F4927F003DC0CD /* GoogleService-Info.plist */; };
 		ADA39A4D25F498BB003DC0CD /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA39A4C25F498BB003DC0CD /* LoginViewModel.swift */; };
 		ADA39A5025F49A6B003DC0CD /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA39A4F25F49A6B003DC0CD /* Credentials.swift */; };
 		ADA39A6525F57E0B003DC0CD /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA39A6425F57E0B003DC0CD /* StringExtensions.swift */; };
@@ -26,6 +25,9 @@
 		ADA39A7E25F5C44E003DC0CD /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA39A7D25F5C44E003DC0CD /* RegisterController.swift */; };
 		ADA39A8225F5C9E7003DC0CD /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA39A8125F5C9E7003DC0CD /* RegisterViewModel.swift */; };
 		ADA39A8625F5E7F8003DC0CD /* UserRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA39A8525F5E7F8003DC0CD /* UserRegister.swift */; };
+		ADA39A8A25F5EFD3003DC0CD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADA39A8925F5EFD3003DC0CD /* GoogleService-Info.plist */; };
+		ADA39A8D25F5F1AD003DC0CD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA39A8C25F5F1AD003DC0CD /* Constants.swift */; };
+		ADA39A9025F5F460003DC0CD /* JSONEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA39A8F25F5F460003DC0CD /* JSONEncoder.swift */; };
 		BBBF13F26EC3391553E3EDF2 /* Pods_RookMotionFrancisco.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 369DBE1B05A3E3512AA584AA /* Pods_RookMotionFrancisco.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,7 +47,6 @@
 		ADA399F225F467E0003DC0CD /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		ADA39A0525F46A28003DC0CD /* TextInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInput.swift; sourceTree = "<group>"; };
 		ADA39A1025F4775B003DC0CD /* ImageName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageName.swift; sourceTree = "<group>"; };
-		ADA39A2A25F4927F003DC0CD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ADA39A4C25F498BB003DC0CD /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		ADA39A4F25F49A6B003DC0CD /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		ADA39A6425F57E0B003DC0CD /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
@@ -53,6 +54,9 @@
 		ADA39A7D25F5C44E003DC0CD /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		ADA39A8125F5C9E7003DC0CD /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		ADA39A8525F5E7F8003DC0CD /* UserRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegister.swift; sourceTree = "<group>"; };
+		ADA39A8925F5EFD3003DC0CD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		ADA39A8C25F5F1AD003DC0CD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		ADA39A8F25F5F460003DC0CD /* JSONEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONEncoder.swift; sourceTree = "<group>"; };
 		B93D70B54DAE1CD11C6463D6 /* Pods-RookMotionFrancisco.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RookMotionFrancisco.release.xcconfig"; path = "Target Support Files/Pods-RookMotionFrancisco/Pods-RookMotionFrancisco.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,7 +123,7 @@
 				ADA399CB25F41074003DC0CD /* Assets.xcassets */,
 				ADA399CD25F41074003DC0CD /* LaunchScreen.storyboard */,
 				ADA399D025F41074003DC0CD /* Info.plist */,
-				ADA39A2A25F4927F003DC0CD /* GoogleService-Info.plist */,
+				ADA39A8925F5EFD3003DC0CD /* GoogleService-Info.plist */,
 			);
 			path = RookMotionFrancisco;
 			sourceTree = "<group>";
@@ -129,6 +133,7 @@
 			children = (
 				ADA39A4F25F49A6B003DC0CD /* Credentials.swift */,
 				ADA39A8525F5E7F8003DC0CD /* UserRegister.swift */,
+				ADA39A8F25F5F460003DC0CD /* JSONEncoder.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -156,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				ADA39A1025F4775B003DC0CD /* ImageName.swift */,
+				ADA39A8C25F5F1AD003DC0CD /* Constants.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -262,7 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADA399CF25F41074003DC0CD /* LaunchScreen.storyboard in Resources */,
-				ADA39A2B25F4927F003DC0CD /* GoogleService-Info.plist in Resources */,
+				ADA39A8A25F5EFD3003DC0CD /* GoogleService-Info.plist in Resources */,
 				ADA399CC25F41074003DC0CD /* Assets.xcassets in Resources */,
 				ADA399CA25F41073003DC0CD /* Main.storyboard in Resources */,
 			);
@@ -324,12 +330,14 @@
 				ADA39A8225F5C9E7003DC0CD /* RegisterViewModel.swift in Sources */,
 				ADA39A4D25F498BB003DC0CD /* LoginViewModel.swift in Sources */,
 				ADA39A7E25F5C44E003DC0CD /* RegisterController.swift in Sources */,
+				ADA39A8D25F5F1AD003DC0CD /* Constants.swift in Sources */,
 				ADA399DE25F432C8003DC0CD /* LoginController.swift in Sources */,
 				ADA39A5025F49A6B003DC0CD /* Credentials.swift in Sources */,
 				ADA39A0625F46A28003DC0CD /* TextInput.swift in Sources */,
 				ADA39A1125F4775B003DC0CD /* ImageName.swift in Sources */,
 				ADA399F025F4675F003DC0CD /* UIButtonExtension.swift in Sources */,
 				ADA39A6525F57E0B003DC0CD /* StringExtensions.swift in Sources */,
+				ADA39A9025F5F460003DC0CD /* JSONEncoder.swift in Sources */,
 				ADA399C325F41073003DC0CD /* AppDelegate.swift in Sources */,
 				ADA399C525F41073003DC0CD /* SceneDelegate.swift in Sources */,
 			);
