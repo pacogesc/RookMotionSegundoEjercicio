@@ -14,7 +14,7 @@ class LoginController: UIViewController {
     //MARK: - Properties
     
     let imageView = UIImageView(image: UIImage(systemName: "person.crop.circle"), contentMode: .scaleAspectFill)
-    let welcomeLabel = UILabel(text: "¡Bienvenido!", font: .boldSystemFont(ofSize: 26), textColor: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), textAlignment: .center)
+    let welcomeLabel = UILabel(text: "¡Bienvenido!", font: .boldSystemFont(ofSize: 26), textColor: .black, textAlignment: .center)
     let userTextInput = TextInput(placeHolder: "Usuario", keyboardType: .emailAddress, isSecureTextEntry: false, backgroundColor: .white)
     let passwordTextInput = TextInput(placeHolder: "Contraseña", keyboardType: .emailAddress, isSecureTextEntry: true, backgroundColor: .white)
     
@@ -33,14 +33,6 @@ class LoginController: UIViewController {
     }
     
     //MARK: - Helpers
-    
-    private func setupGradient() {
-        let gradient = CAGradientLayer()
-        gradient.frame = view.bounds
-        gradient.locations = [0.0, 1.0]
-        gradient.colors = [#colorLiteral(red: 0.2690247297, green: 0.4241275191, blue: 1, alpha: 1).cgColor, #colorLiteral(red: 0.1681487262, green: 0.2643073797, blue: 0.6318634748, alpha: 1).cgColor]
-        view.layer.insertSublayer(gradient, at: 0)
-    }
     
     private func setupViewComponents() {
         setupGradient()
@@ -89,7 +81,7 @@ class LoginController: UIViewController {
     }
     
     @objc private func siginTapped() {
-        
+        navigationController?.pushViewController(RegisterController(), animated: true)
     }
 
 }

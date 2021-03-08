@@ -8,7 +8,6 @@
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-    var coordinator: MainCoordinator?
     
     var window: UIWindow?
 
@@ -17,11 +16,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene  = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
         
-        let navCotroller = UINavigationController()
-        coordinator = MainCoordinator(navigationController: navCotroller)
-        coordinator?.start()
-        
-        window?.rootViewController = navCotroller
+        window = UIWindow(windowScene: windowScene)
+        window?.rootViewController = UINavigationController(rootViewController: LoginController())
         window?.makeKeyAndVisible() 
         
     }

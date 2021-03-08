@@ -9,10 +9,11 @@ import Foundation
 
 struct ImageName{
     
-    //MARK: - Login Images
+    //MARK: - Login-Register Images
     static let rookmotionImage = "rookMotion"
     static let emailImage = "envelope"
     static let passwordImage = "lock"
+    static let profileName = "person.fill"
     
     //MARK: - HomeTabImage
     

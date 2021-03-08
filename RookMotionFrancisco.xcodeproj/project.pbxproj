@@ -14,8 +14,6 @@
 		ADA399CC25F41074003DC0CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADA399CB25F41074003DC0CD /* Assets.xcassets */; };
 		ADA399CF25F41074003DC0CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADA399CD25F41074003DC0CD /* LaunchScreen.storyboard */; };
 		ADA399DE25F432C8003DC0CD /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA399DD25F432C8003DC0CD /* LoginController.swift */; };
-		ADA399E725F45043003DC0CD /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA399E625F45043003DC0CD /* Coordinator.swift */; };
-		ADA399EA25F451FC003DC0CD /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA399E925F451FC003DC0CD /* MainCoordinator.swift */; };
 		ADA399F025F4675F003DC0CD /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA399EF25F4675F003DC0CD /* UIButtonExtension.swift */; };
 		ADA399F325F467E0003DC0CD /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA399F225F467E0003DC0CD /* UIViewControllerExtensions.swift */; };
 		ADA39A0625F46A28003DC0CD /* TextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA39A0525F46A28003DC0CD /* TextInput.swift */; };
@@ -26,6 +24,7 @@
 		ADA39A6525F57E0B003DC0CD /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA39A6425F57E0B003DC0CD /* StringExtensions.swift */; };
 		ADA39A6A25F5A7B3003DC0CD /* FireBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA39A6925F5A7B3003DC0CD /* FireBaseManager.swift */; };
 		ADA39A7E25F5C44E003DC0CD /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA39A7D25F5C44E003DC0CD /* RegisterController.swift */; };
+		ADA39A8225F5C9E7003DC0CD /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA39A8125F5C9E7003DC0CD /* RegisterViewModel.swift */; };
 		BBBF13F26EC3391553E3EDF2 /* Pods_RookMotionFrancisco.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 369DBE1B05A3E3512AA584AA /* Pods_RookMotionFrancisco.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,8 +40,6 @@
 		ADA399CE25F41074003DC0CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ADA399D025F41074003DC0CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADA399DD25F432C8003DC0CD /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
-		ADA399E625F45043003DC0CD /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		ADA399E925F451FC003DC0CD /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		ADA399EF25F4675F003DC0CD /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		ADA399F225F467E0003DC0CD /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		ADA39A0525F46A28003DC0CD /* TextInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInput.swift; sourceTree = "<group>"; };
@@ -53,6 +50,7 @@
 		ADA39A6425F57E0B003DC0CD /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		ADA39A6925F5A7B3003DC0CD /* FireBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseManager.swift; sourceTree = "<group>"; };
 		ADA39A7D25F5C44E003DC0CD /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
+		ADA39A8125F5C9E7003DC0CD /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		B93D70B54DAE1CD11C6463D6 /* Pods-RookMotionFrancisco.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RookMotionFrancisco.release.xcconfig"; path = "Target Support Files/Pods-RookMotionFrancisco/Pods-RookMotionFrancisco.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,7 +105,6 @@
 			isa = PBXGroup;
 			children = (
 				ADA39A6025F577D5003DC0CD /* Networking */,
-				ADA399E525F44E0C003DC0CD /* Coordinator */,
 				ADA399D725F41087003DC0CD /* Model */,
 				ADA399D825F41091003DC0CD /* View */,
 				ADA399D925F4109D003DC0CD /* ViewModel */,
@@ -147,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				ADA39A4C25F498BB003DC0CD /* LoginViewModel.swift */,
+				ADA39A8125F5C9E7003DC0CD /* RegisterViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -157,15 +155,6 @@
 				ADA39A1025F4775B003DC0CD /* ImageName.swift */,
 			);
 			path = Helpers;
-			sourceTree = "<group>";
-		};
-		ADA399E525F44E0C003DC0CD /* Coordinator */ = {
-			isa = PBXGroup;
-			children = (
-				ADA399E625F45043003DC0CD /* Coordinator.swift */,
-				ADA399E925F451FC003DC0CD /* MainCoordinator.swift */,
-			);
-			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		ADA399ED25F46727003DC0CD /* Extensions */ = {
@@ -328,11 +317,10 @@
 				ADA39A6A25F5A7B3003DC0CD /* FireBaseManager.swift in Sources */,
 				ADA399F325F467E0003DC0CD /* UIViewControllerExtensions.swift in Sources */,
 				ADA399C725F41073003DC0CD /* ViewController.swift in Sources */,
+				ADA39A8225F5C9E7003DC0CD /* RegisterViewModel.swift in Sources */,
 				ADA39A4D25F498BB003DC0CD /* LoginViewModel.swift in Sources */,
-				ADA399EA25F451FC003DC0CD /* MainCoordinator.swift in Sources */,
 				ADA39A7E25F5C44E003DC0CD /* RegisterController.swift in Sources */,
 				ADA399DE25F432C8003DC0CD /* LoginController.swift in Sources */,
-				ADA399E725F45043003DC0CD /* Coordinator.swift in Sources */,
 				ADA39A5025F49A6B003DC0CD /* Credentials.swift in Sources */,
 				ADA39A0625F46A28003DC0CD /* TextInput.swift in Sources */,
 				ADA39A1125F4775B003DC0CD /* ImageName.swift in Sources */,
