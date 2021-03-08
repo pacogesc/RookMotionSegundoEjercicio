@@ -90,6 +90,13 @@ class RegisterController: UIViewController {
         
     }
     
+    private func cleanFields() {
+        userTextInput.inputTextField.text = ""
+        passwordTextInput.inputTextField.text = ""
+        nameTextInput.inputTextField.text = ""
+        lastNamesTextInput.inputTextField.text = ""
+    }
+    
     //MARK: - Selectors
     
     @objc private func registerTapped() {
@@ -102,15 +109,19 @@ class RegisterController: UIViewController {
 
 }
 
-
-extension RegisterController: RegisterViewModelDelegate {
+extension RegisterController: RegisterViewModelDelegate, Alertable {
     func success() {
         hud.indicatorView = JGProgressHUDSuccessIndicatorView()
         hud.dismiss(afterDelay: 0.2, animated: true)
+        let action = UIAlertAction(title: "Ok", style: .default, handler: { [weak self] _ in
+            self?.navigationController?.popToRootViewController(animated: true)
+        })
+        showAlert(title: "Registro completo", message: "Ya puedes iniciar tu sesion", actions: [action], preferredStyle: .alert)
     }
     
     func failure(_ messaege: String) {
         hud.dismiss(afterDelay: 0.2, animated: true)
+        showAlert(title: "Error", message: messaege, preferredStyle: .alert)
     }
     
     func loading() {

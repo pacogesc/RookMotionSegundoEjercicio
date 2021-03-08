@@ -28,6 +28,7 @@
 		ADA39A8A25F5EFD3003DC0CD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADA39A8925F5EFD3003DC0CD /* GoogleService-Info.plist */; };
 		ADA39A8D25F5F1AD003DC0CD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA39A8C25F5F1AD003DC0CD /* Constants.swift */; };
 		ADA39A9025F5F460003DC0CD /* JSONEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA39A8F25F5F460003DC0CD /* JSONEncoder.swift */; };
+		ADA39AD525F6A63E003DC0CD /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA39AD425F6A63E003DC0CD /* Alertable.swift */; };
 		BBBF13F26EC3391553E3EDF2 /* Pods_RookMotionFrancisco.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 369DBE1B05A3E3512AA584AA /* Pods_RookMotionFrancisco.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 		ADA39A8925F5EFD3003DC0CD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ADA39A8C25F5F1AD003DC0CD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		ADA39A8F25F5F460003DC0CD /* JSONEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONEncoder.swift; sourceTree = "<group>"; };
+		ADA39AD425F6A63E003DC0CD /* Alertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
 		B93D70B54DAE1CD11C6463D6 /* Pods-RookMotionFrancisco.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RookMotionFrancisco.release.xcconfig"; path = "Target Support Files/Pods-RookMotionFrancisco/Pods-RookMotionFrancisco.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -162,6 +164,7 @@
 			children = (
 				ADA39A1025F4775B003DC0CD /* ImageName.swift */,
 				ADA39A8C25F5F1AD003DC0CD /* Constants.swift */,
+				ADA39AD425F6A63E003DC0CD /* Alertable.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADA39AD525F6A63E003DC0CD /* Alertable.swift in Sources */,
 				ADA39A8625F5E7F8003DC0CD /* UserRegister.swift in Sources */,
 				ADA39A6A25F5A7B3003DC0CD /* FireBaseManager.swift in Sources */,
 				ADA399F325F467E0003DC0CD /* UIViewControllerExtensions.swift in Sources */,
