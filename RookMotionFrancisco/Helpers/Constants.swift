@@ -13,4 +13,8 @@ struct Constants {
     struct FStore {
         static let collectionName = "users"
     }
+    
+    struct DefaultsConstants {
+        static let loggedIn = "loggedIn"
+    }
 }

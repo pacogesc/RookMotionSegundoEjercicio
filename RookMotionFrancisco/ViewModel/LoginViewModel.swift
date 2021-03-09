@@ -15,25 +15,24 @@ protocol LoginViewModelDelegate {
 
 class LoginViewModel: NSObject {
     
-    let credentialUser: Credentials
+    //MARK: - Properties
+    
     var loginViewModelDelegate: LoginViewModelDelegate?
     var firebaseManager = FireBaseManager()
     
-    init(credentials: Credentials) {
-        self.credentialUser = credentials
-    }
+    //MARK: - Methods
     
-    func checkUser() {
-        if credentialUser.email.isEmpty || credentialUser.password.isEmpty {
-            loginViewModelDelegate?.failure("Usuario o contraseña invalido")
+    func checkUser(email: String?, password: String?) {
+        if let email = email, let password = password, !email.isEmpty || !password.isEmpty {
+            authenticateUser(email: email, password: password)
         } else {
-            authenticateUser()
+            loginViewModelDelegate?.failure("Usuario o contraseña invalido")
         }
     }
     
-    private func authenticateUser() {
+    private func authenticateUser(email: String, password: String) {
         loginViewModelDelegate?.loading()
-        firebaseManager.sign(email: credentialUser.email, password: credentialUser.password) { [weak self] (res, err) in
+        firebaseManager.sign(email: email, password: password) { [weak self] (res, err) in
             if let _ = err {
                 self?.loginViewModelDelegate?.failure("Usuario o contraseña incorrectos")
             }

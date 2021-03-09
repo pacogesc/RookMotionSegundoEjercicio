@@ -29,6 +29,22 @@
 		ADA39A8D25F5F1AD003DC0CD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA39A8C25F5F1AD003DC0CD /* Constants.swift */; };
 		ADA39A9025F5F460003DC0CD /* JSONEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA39A8F25F5F460003DC0CD /* JSONEncoder.swift */; };
 		ADA39AD525F6A63E003DC0CD /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA39AD425F6A63E003DC0CD /* Alertable.swift */; };
+		ADA39AE325F727A8003DC0CD /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA39AE225F727A8003DC0CD /* HomeController.swift */; };
+		ADA39AE825F727E0003DC0CD /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA39AE725F727E0003DC0CD /* MenuController.swift */; };
+		ADA39AF325F73BC0003DC0CD /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA39AF025F73BC0003DC0CD /* JSONParameterEncoder.swift */; };
+		ADA39AF425F73BC0003DC0CD /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA39AF125F73BC0003DC0CD /* ParameterEncoding.swift */; };
+		ADA39AF525F73BC0003DC0CD /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA39AF225F73BC0003DC0CD /* URLParameterEncoder.swift */; };
+		ADA39AFC25F73C14003DC0CD /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA39AF725F73C14003DC0CD /* HTTPTask.swift */; };
+		ADA39AFD25F73C14003DC0CD /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA39AF825F73C14003DC0CD /* NetworkRouter.swift */; };
+		ADA39AFE25F73C14003DC0CD /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA39AF925F73C14003DC0CD /* Router.swift */; };
+		ADA39AFF25F73C14003DC0CD /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA39AFA25F73C14003DC0CD /* EndPointType.swift */; };
+		ADA39B0025F73C14003DC0CD /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA39AFB25F73C14003DC0CD /* HTTPMethod.swift */; };
+		ADA39B0325F73CB1003DC0CD /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA39B0225F73CB1003DC0CD /* NetworkManager.swift */; };
+		ADA39B0725F73D9A003DC0CD /* HubblesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA39B0625F73D9A003DC0CD /* HubblesAPI.swift */; };
+		ADA39B0B25F740C7003DC0CD /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA39B0A25F740C7003DC0CD /* HomeCell.swift */; };
+		ADA39B0F25F74689003DC0CD /* HubbleNewsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA39B0E25F74689003DC0CD /* HubbleNewsResponse.swift */; };
+		ADA39B1225F74CA3003DC0CD /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA39B1125F74CA3003DC0CD /* HomeViewModel.swift */; };
+		ADA39B1625F75145003DC0CD /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA39B1525F75145003DC0CD /* NewsViewModel.swift */; };
 		BBBF13F26EC3391553E3EDF2 /* Pods_RookMotionFrancisco.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 369DBE1B05A3E3512AA584AA /* Pods_RookMotionFrancisco.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +75,22 @@
 		ADA39A8C25F5F1AD003DC0CD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		ADA39A8F25F5F460003DC0CD /* JSONEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONEncoder.swift; sourceTree = "<group>"; };
 		ADA39AD425F6A63E003DC0CD /* Alertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
+		ADA39AE225F727A8003DC0CD /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		ADA39AE725F727E0003DC0CD /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
+		ADA39AF025F73BC0003DC0CD /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
+		ADA39AF125F73BC0003DC0CD /* ParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		ADA39AF225F73BC0003DC0CD /* URLParameterEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLParameterEncoder.swift; sourceTree = "<group>"; };
+		ADA39AF725F73C14003DC0CD /* HTTPTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
+		ADA39AF825F73C14003DC0CD /* NetworkRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
+		ADA39AF925F73C14003DC0CD /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		ADA39AFA25F73C14003DC0CD /* EndPointType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
+		ADA39AFB25F73C14003DC0CD /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		ADA39B0225F73CB1003DC0CD /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		ADA39B0625F73D9A003DC0CD /* HubblesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HubblesAPI.swift; sourceTree = "<group>"; };
+		ADA39B0A25F740C7003DC0CD /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
+		ADA39B0E25F74689003DC0CD /* HubbleNewsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HubbleNewsResponse.swift; sourceTree = "<group>"; };
+		ADA39B1125F74CA3003DC0CD /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		ADA39B1525F75145003DC0CD /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
 		B93D70B54DAE1CD11C6463D6 /* Pods-RookMotionFrancisco.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RookMotionFrancisco.release.xcconfig"; path = "Target Support Files/Pods-RookMotionFrancisco/Pods-RookMotionFrancisco.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -136,6 +168,7 @@
 				ADA39A4F25F49A6B003DC0CD /* Credentials.swift */,
 				ADA39A8525F5E7F8003DC0CD /* UserRegister.swift */,
 				ADA39A8F25F5F460003DC0CD /* JSONEncoder.swift */,
+				ADA39B0E25F74689003DC0CD /* HubbleNewsResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -143,6 +176,8 @@
 		ADA399D825F41091003DC0CD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				ADA39AE625F727B6003DC0CD /* Menu */,
+				ADA39AE125F72780003DC0CD /* Home */,
 				ADA39A7B25F5C39A003DC0CD /* Register */,
 				ADA39A6725F57EA8003DC0CD /* Login */,
 				ADA399F825F4683B003DC0CD /* CommonElements */,
@@ -153,6 +188,7 @@
 		ADA399D925F4109D003DC0CD /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				ADA39B1425F7512F003DC0CD /* HomeViewModel */,
 				ADA39A4C25F498BB003DC0CD /* LoginViewModel.swift */,
 				ADA39A8125F5C9E7003DC0CD /* RegisterViewModel.swift */,
 			);
@@ -190,6 +226,10 @@
 		ADA39A6025F577D5003DC0CD /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				ADA39AEF25F73BA7003DC0CD /* EndPoint */,
+				ADA39AEE25F73B9C003DC0CD /* Manager */,
+				ADA39AED25F73B95003DC0CD /* Service */,
+				ADA39AEC25F73B72003DC0CD /* Encoding */,
 				ADA39A6925F5A7B3003DC0CD /* FireBaseManager.swift */,
 			);
 			path = Networking;
@@ -209,6 +249,78 @@
 				ADA39A7D25F5C44E003DC0CD /* RegisterController.swift */,
 			);
 			path = Register;
+			sourceTree = "<group>";
+		};
+		ADA39AE125F72780003DC0CD /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				ADA39B0925F74098003DC0CD /* Cell */,
+				ADA39AE225F727A8003DC0CD /* HomeController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		ADA39AE625F727B6003DC0CD /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				ADA39AE725F727E0003DC0CD /* MenuController.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		ADA39AEC25F73B72003DC0CD /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				ADA39AF025F73BC0003DC0CD /* JSONParameterEncoder.swift */,
+				ADA39AF125F73BC0003DC0CD /* ParameterEncoding.swift */,
+				ADA39AF225F73BC0003DC0CD /* URLParameterEncoder.swift */,
+			);
+			path = Encoding;
+			sourceTree = "<group>";
+		};
+		ADA39AED25F73B95003DC0CD /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				ADA39AFA25F73C14003DC0CD /* EndPointType.swift */,
+				ADA39AFB25F73C14003DC0CD /* HTTPMethod.swift */,
+				ADA39AF725F73C14003DC0CD /* HTTPTask.swift */,
+				ADA39AF825F73C14003DC0CD /* NetworkRouter.swift */,
+				ADA39AF925F73C14003DC0CD /* Router.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		ADA39AEE25F73B9C003DC0CD /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				ADA39B0225F73CB1003DC0CD /* NetworkManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		ADA39AEF25F73BA7003DC0CD /* EndPoint */ = {
+			isa = PBXGroup;
+			children = (
+				ADA39B0625F73D9A003DC0CD /* HubblesAPI.swift */,
+			);
+			path = EndPoint;
+			sourceTree = "<group>";
+		};
+		ADA39B0925F74098003DC0CD /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				ADA39B0A25F740C7003DC0CD /* HomeCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		ADA39B1425F7512F003DC0CD /* HomeViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				ADA39B1125F74CA3003DC0CD /* HomeViewModel.swift */,
+				ADA39B1525F75145003DC0CD /* NewsViewModel.swift */,
+			);
+			path = HomeViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,23 +438,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADA39AE825F727E0003DC0CD /* MenuController.swift in Sources */,
+				ADA39B1225F74CA3003DC0CD /* HomeViewModel.swift in Sources */,
 				ADA39AD525F6A63E003DC0CD /* Alertable.swift in Sources */,
 				ADA39A8625F5E7F8003DC0CD /* UserRegister.swift in Sources */,
+				ADA39AF525F73BC0003DC0CD /* URLParameterEncoder.swift in Sources */,
 				ADA39A6A25F5A7B3003DC0CD /* FireBaseManager.swift in Sources */,
 				ADA399F325F467E0003DC0CD /* UIViewControllerExtensions.swift in Sources */,
+				ADA39AF325F73BC0003DC0CD /* JSONParameterEncoder.swift in Sources */,
+				ADA39AFD25F73C14003DC0CD /* NetworkRouter.swift in Sources */,
+				ADA39B1625F75145003DC0CD /* NewsViewModel.swift in Sources */,
 				ADA399C725F41073003DC0CD /* ViewController.swift in Sources */,
 				ADA39A8225F5C9E7003DC0CD /* RegisterViewModel.swift in Sources */,
 				ADA39A4D25F498BB003DC0CD /* LoginViewModel.swift in Sources */,
+				ADA39AFF25F73C14003DC0CD /* EndPointType.swift in Sources */,
 				ADA39A7E25F5C44E003DC0CD /* RegisterController.swift in Sources */,
+				ADA39AFE25F73C14003DC0CD /* Router.swift in Sources */,
+				ADA39B0325F73CB1003DC0CD /* NetworkManager.swift in Sources */,
 				ADA39A8D25F5F1AD003DC0CD /* Constants.swift in Sources */,
+				ADA39B0B25F740C7003DC0CD /* HomeCell.swift in Sources */,
+				ADA39B0F25F74689003DC0CD /* HubbleNewsResponse.swift in Sources */,
+				ADA39AFC25F73C14003DC0CD /* HTTPTask.swift in Sources */,
+				ADA39B0025F73C14003DC0CD /* HTTPMethod.swift in Sources */,
 				ADA399DE25F432C8003DC0CD /* LoginController.swift in Sources */,
 				ADA39A5025F49A6B003DC0CD /* Credentials.swift in Sources */,
 				ADA39A0625F46A28003DC0CD /* TextInput.swift in Sources */,
 				ADA39A1125F4775B003DC0CD /* ImageName.swift in Sources */,
 				ADA399F025F4675F003DC0CD /* UIButtonExtension.swift in Sources */,
+				ADA39AF425F73BC0003DC0CD /* ParameterEncoding.swift in Sources */,
 				ADA39A6525F57E0B003DC0CD /* StringExtensions.swift in Sources */,
 				ADA39A9025F5F460003DC0CD /* JSONEncoder.swift in Sources */,
+				ADA39B0725F73D9A003DC0CD /* HubblesAPI.swift in Sources */,
 				ADA399C325F41073003DC0CD /* AppDelegate.swift in Sources */,
+				ADA39AE325F727A8003DC0CD /* HomeController.swift in Sources */,
 				ADA399C525F41073003DC0CD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

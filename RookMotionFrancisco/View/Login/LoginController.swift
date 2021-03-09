@@ -21,11 +21,20 @@ class LoginController: UIViewController {
     lazy var loginButton = UIButton(title: "Iniciar", titleColor: .white, font: .boldSystemFont(ofSize: 16), backgroundColor: .clear, target: self, action: #selector(loginTapped))
     lazy var siginButton = UIButton(title: "Únete", titleColor: .black, font: .boldSystemFont(ofSize: 16), backgroundColor: .clear, target: self, action: #selector(siginTapped))
     
+    private let loginViewModel = LoginViewModel()
+    
+    let hud = JGProgressHUD(style: .dark)
+    
     //MARK: - Life Cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViewComponents()
+        loginViewModel.loginViewModelDelegate = self
+        let loggedIn = UserDefaults.standard.bool(forKey: Constants.DefaultsConstants.loggedIn)
+        if loggedIn {
+            navigationController?.pushViewController(HomeController(), animated: true)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -77,11 +86,32 @@ class LoginController: UIViewController {
     //MARK: - Selectors
     
     @objc private func loginTapped() {
-        
+        loginViewModel.checkUser(email: userTextInput.inputTextField.text, password: passwordTextInput.inputTextField.text)
     }
     
     @objc private func siginTapped() {
         navigationController?.pushViewController(RegisterController(), animated: true)
     }
 
+}
+
+
+extension LoginController: LoginViewModelDelegate, Alertable {
+    func success() {
+        hud.dismiss(animated: true)
+        UserDefaults.standard.setValue(true, forKey: Constants.DefaultsConstants.loggedIn)
+        navigationController?.pushViewController(HomeController(), animated: true)
+    }
+    
+    func failure(_ messaege: String) {
+        hud.dismiss(afterDelay: 0.2, animated: true)
+        showAlert(title: "Error", message: messaege, preferredStyle: .alert)
+    }
+    
+    func loading() {
+        hud.indicatorView = JGProgressHUDIndeterminateIndicatorView()
+        hud.show(in: view)
+    }
+    
+    
 }

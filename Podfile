@@ -11,6 +11,7 @@ target 'RookMotionFrancisco' do
   pod 'IQKeyboardManagerSwift', '6.5.6'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
+  pod 'SDWebImage'
 
 end
 

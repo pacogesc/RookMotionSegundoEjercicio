@@ -16,11 +16,15 @@ protocol RegisterViewModelDelegate {
 
 class RegisterViewModel {
     
+    //MARK: - Properties
+    
     var registerViewModelDelegate: RegisterViewModelDelegate?
     let firebaseManager = FireBaseManager()
     
     init() {
     }
+    
+    //MARK: - Methods
     
     func validateUser(email: String?, password: String?, name: String?, lastName: String?) {
         registerViewModelDelegate?.loading()
