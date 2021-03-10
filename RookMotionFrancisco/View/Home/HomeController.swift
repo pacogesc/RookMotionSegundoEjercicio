@@ -48,7 +48,7 @@ class HomeController: UICollectionViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        setupNavBar(title: "Noticias", largeTitle: false)
+        setupNavBar(title: "Noticias", largeTitle: true)
         navigationController?.setNavigationBarHidden(false, animated: false)
         navigationItem.hidesBackButton = true
         searchController.searchResultsUpdater = self

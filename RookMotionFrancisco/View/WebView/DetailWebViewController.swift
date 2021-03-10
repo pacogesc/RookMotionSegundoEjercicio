@@ -35,7 +35,7 @@ class DetailWebViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        setupNavBar(title: "Noticia", largeTitle: false)
+        setupNavBar(title: "Noticia", largeTitle: true)
         navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
