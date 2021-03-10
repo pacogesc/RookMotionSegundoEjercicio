@@ -11,7 +11,7 @@ class HomeCell: UICollectionViewCell {
     
     //MARK: - Properties
     
-    let imageView = UIImageView(image: nil, contentMode: .scaleAspectFit)
+    let imageView = UIImageView(image: nil, contentMode: .scaleAspectFill)
     let titleLabel = UILabel(font: .boldSystemFont(ofSize: 14), textColor: .black, numberOfLines: -1)
     let descriptionLabel = UILabel(font: .boldSystemFont(ofSize: 12), textColor: .gray, textAlignment: .justified , numberOfLines: -1)
     

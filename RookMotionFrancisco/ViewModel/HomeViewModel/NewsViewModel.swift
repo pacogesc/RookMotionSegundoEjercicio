@@ -14,6 +14,7 @@ class NewsViewModel {
     let description: String
     let titleDescription: String
     let url: String
+    let urlNew: String
     
     //MARK: - Init
     
@@ -21,6 +22,7 @@ class NewsViewModel {
         self.name = new.title
         self.description = new.description
         self.url = "https:\(new.image)"
+        self.urlNew = new.link
         self.titleDescription = "\(new.title) \(new.description)"
     }
     

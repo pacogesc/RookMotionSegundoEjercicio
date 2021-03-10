@@ -35,4 +35,12 @@ class HomeViewModel {
             self?.homeViewModelDelegate?.loadNews(hubbleNews: res)
         }
     }
+    
+    func filterNews(byTitle title: String, news: [NewsViewModel]) -> [NewsViewModel] {
+        let titeLower = title.lowercased()
+        let newsToReturn = news.filter({ new in
+            return new.name.localizedCaseInsensitiveContains(titeLower)
+        })
+        return newsToReturn
+    }
 }

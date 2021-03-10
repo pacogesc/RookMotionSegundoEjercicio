@@ -17,8 +17,10 @@ class HomeController: UICollectionViewController {
     
     private let homeViewModel = HomeViewModel()
     private var newViewModel = [NewsViewModel]()
+    private var newViewModelFilter = [NewsViewModel]()
     
     let searchController = UISearchController(searchResultsController: nil)
+    
     private var inSearchMode: Bool {
         return searchController.isActive && !searchController.searchBar.text!.isEmpty
     }
@@ -48,6 +50,7 @@ class HomeController: UICollectionViewController {
         super.viewWillAppear(animated)
         setupNavBar(title: "Noticias", largeTitle: false)
         navigationController?.setNavigationBarHidden(false, animated: false)
+        navigationItem.hidesBackButton = true
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Buscar"
@@ -86,13 +89,13 @@ extension HomeController {
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return newViewModel.count
+        return !inSearchMode ? newViewModel.count : newViewModelFilter.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellid, for: indexPath) as! HomeCell
-        cell.newsViewModel = newViewModel[indexPath.item]
-        cell.imageView.sd_setImage(with: URL(string: newViewModel[indexPath.item].url)) { (image, error, cacheType, url) in
+        cell.newsViewModel = !inSearchMode ? newViewModel[indexPath.item] : newViewModelFilter[indexPath.item]
+        cell.imageView.sd_setImage(with: URL(string: !inSearchMode ? newViewModel[indexPath.item].url : newViewModelFilter[indexPath.item].url)) { (image, error, cacheType, url) in
             if error != nil{
                 cell.imageView.image = UIImage(systemName: "xmark.bin")
                 return
@@ -106,7 +109,7 @@ extension HomeController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        navigationController?.pushViewController(DetailWebViewController(newViewModel: !inSearchMode ? newViewModel[indexPath.item] : newViewModelFilter[indexPath.item]), animated: true)
     }
     
 }
@@ -118,7 +121,7 @@ extension HomeController: UICollectionViewDelegateFlowLayout {
         let width = view.frame.width - 32
         var height = (view.frame.height / 3)
         
-        height = requiredHeight(labelText: newViewModel[indexPath.item].titleDescription)
+        height = requiredHeight(labelText: !inSearchMode ? newViewModel[indexPath.item].titleDescription : newViewModelFilter[indexPath.item].titleDescription)
         
         height = height > 150 ? height : 150
         
@@ -153,6 +156,8 @@ extension HomeController: HomeViewModelDelegate, Alertable {
 extension HomeController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         guard let searchText = searchController.searchBar.text else { return }
+        newViewModelFilter = homeViewModel.filterNews(byTitle: searchText, news: newViewModel)
+        collectionView.reloadData()
     }
 }
 
