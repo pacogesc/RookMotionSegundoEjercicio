@@ -8,6 +8,8 @@
 import UIKit
 import LBTATools
 import JGProgressHUD
+import Security
+import KeychainSwift
 
 class LoginController: UIViewController {
     
@@ -95,8 +97,11 @@ class LoginController: UIViewController {
 
 
 extension LoginController: LoginViewModelDelegate, Alertable {
-    func success() {
+    func success(user: String, pass: String) {
         hud.dismiss(animated: true)
+        let keychain = KeychainSwift()
+        keychain.set(user, forKey: Constants.KeychainConstants.user)
+        keychain.set(pass, forKey: Constants.KeychainConstants.password)
         UserDefaults.standard.setValue(true, forKey: Constants.DefaultsConstants.loggedIn)
         navigationController?.pushViewController(HomeController(), animated: true)
     }

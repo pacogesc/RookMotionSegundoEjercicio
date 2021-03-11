@@ -8,7 +8,7 @@
 import Foundation
 
 protocol LoginViewModelDelegate {
-    func success()
+    func success(user: String, pass: String)
     func failure(_ messaege: String)
     func loading()
 }
@@ -37,7 +37,7 @@ class LoginViewModel: NSObject {
                 self?.loginViewModelDelegate?.failure("Usuario o contraseña incorrectos")
             }
             if let _ = res {
-                self?.loginViewModelDelegate?.success()
+                self?.loginViewModelDelegate?.success(user: email, pass: password)
             }
         }
     }

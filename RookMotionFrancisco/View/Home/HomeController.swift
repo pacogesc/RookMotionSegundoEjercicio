@@ -50,6 +50,7 @@ class HomeController: UICollectionViewController {
         super.viewWillAppear(animated)
         setupNavBar(title: "Noticias", largeTitle: true)
         navigationController?.setNavigationBarHidden(false, animated: false)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "line.horizontal.3")!, style: .plain, target: self, action: #selector(menuButtonTapped))
         navigationItem.hidesBackButton = true
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
@@ -74,7 +75,13 @@ class HomeController: UICollectionViewController {
         label.text = labelText
         label.sizeToFit()
         return label.frame.height
-
+    }
+    
+    //MARK: - Selectors
+    
+    @objc fileprivate func menuButtonTapped() {
+        let menu = MenuController(rootViewController: UIViewController())
+        self.present(menu, animated: false)
     }
 
 }

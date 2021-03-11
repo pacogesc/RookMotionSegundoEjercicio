@@ -17,4 +17,9 @@ struct Constants {
     struct DefaultsConstants {
         static let loggedIn = "loggedIn"
     }
+    
+    struct KeychainConstants {
+        static let user = "user"
+        static let password = "password"
+    }
 }

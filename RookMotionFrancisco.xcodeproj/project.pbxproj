@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		AD7EF8DF25F8991500848D73 /* DetailWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7EF8DE25F8991500848D73 /* DetailWebViewController.swift */; };
+		AD7EF8E725F89F4C00848D73 /* RealmUserDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7EF8E625F89F4C00848D73 /* RealmUserDataManager.swift */; };
+		AD7EF90325F8A26F00848D73 /* UserRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7EF90225F8A26F00848D73 /* UserRealmModel.swift */; };
+		AD7EF90A25F9C4D400848D73 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7EF90925F9C4D400848D73 /* MenuViewModel.swift */; };
+		AD7EF90D25F9D12700848D73 /* UIViewExtensionMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7EF90C25F9D12700848D73 /* UIViewExtensionMenu.swift */; };
 		ADA399C325F41073003DC0CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA399C225F41073003DC0CD /* AppDelegate.swift */; };
 		ADA399C525F41073003DC0CD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA399C425F41073003DC0CD /* SceneDelegate.swift */; };
 		ADA399C725F41073003DC0CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA399C625F41073003DC0CD /* ViewController.swift */; };
@@ -53,6 +57,10 @@
 		22F5E05607186BE235D1D935 /* Pods-RookMotionFrancisco.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RookMotionFrancisco.debug.xcconfig"; path = "Target Support Files/Pods-RookMotionFrancisco/Pods-RookMotionFrancisco.debug.xcconfig"; sourceTree = "<group>"; };
 		369DBE1B05A3E3512AA584AA /* Pods_RookMotionFrancisco.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RookMotionFrancisco.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD7EF8DE25F8991500848D73 /* DetailWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWebViewController.swift; sourceTree = "<group>"; };
+		AD7EF8E625F89F4C00848D73 /* RealmUserDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmUserDataManager.swift; sourceTree = "<group>"; };
+		AD7EF90225F8A26F00848D73 /* UserRealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRealmModel.swift; sourceTree = "<group>"; };
+		AD7EF90925F9C4D400848D73 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
+		AD7EF90C25F9D12700848D73 /* UIViewExtensionMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensionMenu.swift; sourceTree = "<group>"; };
 		ADA399BF25F41073003DC0CD /* RookMotionFrancisco.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RookMotionFrancisco.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADA399C225F41073003DC0CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADA399C425F41073003DC0CD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +141,23 @@
 			path = WebView;
 			sourceTree = "<group>";
 		};
+		AD7EF8E225F89F1200848D73 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				AD7EF8E425F89F1700848D73 /* PersistentStorages */,
+				ADA39A6025F577D5003DC0CD /* Networking */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		AD7EF8E425F89F1700848D73 /* PersistentStorages */ = {
+			isa = PBXGroup;
+			children = (
+				AD7EF8E625F89F4C00848D73 /* RealmUserDataManager.swift */,
+			);
+			path = PersistentStorages;
+			sourceTree = "<group>";
+		};
 		ADA399B625F41073003DC0CD = {
 			isa = PBXGroup;
 			children = (
@@ -154,7 +179,7 @@
 		ADA399C125F41073003DC0CD /* RookMotionFrancisco */ = {
 			isa = PBXGroup;
 			children = (
-				ADA39A6025F577D5003DC0CD /* Networking */,
+				AD7EF8E225F89F1200848D73 /* Data */,
 				ADA399D725F41087003DC0CD /* Model */,
 				ADA399D825F41091003DC0CD /* View */,
 				ADA399D925F4109D003DC0CD /* ViewModel */,
@@ -179,6 +204,7 @@
 				ADA39A8525F5E7F8003DC0CD /* UserRegister.swift */,
 				ADA39A8F25F5F460003DC0CD /* JSONEncoder.swift */,
 				ADA39B0E25F74689003DC0CD /* HubbleNewsResponse.swift */,
+				AD7EF90225F8A26F00848D73 /* UserRealmModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -202,6 +228,7 @@
 				ADA39B1425F7512F003DC0CD /* HomeViewModel */,
 				ADA39A4C25F498BB003DC0CD /* LoginViewModel.swift */,
 				ADA39A8125F5C9E7003DC0CD /* RegisterViewModel.swift */,
+				AD7EF90925F9C4D400848D73 /* MenuViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -222,6 +249,7 @@
 				ADA399EF25F4675F003DC0CD /* UIButtonExtension.swift */,
 				ADA399F225F467E0003DC0CD /* UIViewControllerExtensions.swift */,
 				ADA39A6425F57E0B003DC0CD /* StringExtensions.swift */,
+				AD7EF90C25F9D12700848D73 /* UIViewExtensionMenu.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -452,6 +480,7 @@
 				ADA39AE825F727E0003DC0CD /* MenuController.swift in Sources */,
 				ADA39B1225F74CA3003DC0CD /* HomeViewModel.swift in Sources */,
 				ADA39AD525F6A63E003DC0CD /* Alertable.swift in Sources */,
+				AD7EF90A25F9C4D400848D73 /* MenuViewModel.swift in Sources */,
 				ADA39A8625F5E7F8003DC0CD /* UserRegister.swift in Sources */,
 				ADA39AF525F73BC0003DC0CD /* URLParameterEncoder.swift in Sources */,
 				ADA39A6A25F5A7B3003DC0CD /* FireBaseManager.swift in Sources */,
@@ -464,6 +493,7 @@
 				ADA39A4D25F498BB003DC0CD /* LoginViewModel.swift in Sources */,
 				ADA39AFF25F73C14003DC0CD /* EndPointType.swift in Sources */,
 				AD7EF8DF25F8991500848D73 /* DetailWebViewController.swift in Sources */,
+				AD7EF90D25F9D12700848D73 /* UIViewExtensionMenu.swift in Sources */,
 				ADA39A7E25F5C44E003DC0CD /* RegisterController.swift in Sources */,
 				ADA39AFE25F73C14003DC0CD /* Router.swift in Sources */,
 				ADA39B0325F73CB1003DC0CD /* NetworkManager.swift in Sources */,
@@ -474,6 +504,7 @@
 				ADA39B0025F73C14003DC0CD /* HTTPMethod.swift in Sources */,
 				ADA399DE25F432C8003DC0CD /* LoginController.swift in Sources */,
 				ADA39A5025F49A6B003DC0CD /* Credentials.swift in Sources */,
+				AD7EF90325F8A26F00848D73 /* UserRealmModel.swift in Sources */,
 				ADA39A0625F46A28003DC0CD /* TextInput.swift in Sources */,
 				ADA39A1125F4775B003DC0CD /* ImageName.swift in Sources */,
 				ADA399F025F4675F003DC0CD /* UIButtonExtension.swift in Sources */,
@@ -483,6 +514,7 @@
 				ADA39B0725F73D9A003DC0CD /* HubblesAPI.swift in Sources */,
 				ADA399C325F41073003DC0CD /* AppDelegate.swift in Sources */,
 				ADA39AE325F727A8003DC0CD /* HomeController.swift in Sources */,
+				AD7EF8E725F89F4C00848D73 /* RealmUserDataManager.swift in Sources */,
 				ADA399C525F41073003DC0CD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

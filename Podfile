@@ -12,6 +12,8 @@ target 'RookMotionFrancisco' do
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
   pod 'SDWebImage'
+  pod 'RealmSwift'
+  pod 'KeychainSwift', '19.0'
 
 end
 
