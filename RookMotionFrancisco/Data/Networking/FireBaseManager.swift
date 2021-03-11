@@ -34,12 +34,16 @@ class FireBaseManager {
     }
     
     func storeUserInfo(userStore: UserStore, completion: @escaping(() -> Void), failure: @escaping((_ error: String) -> Void)) {
-        db.collection(Constants.FStore.collectionName).addDocument(data: userStore.dictionary) { err in
+        db.collection(Constants.FStore.collectionName).document(userStore.email).setData(userStore.dictionary) { err in
             if let err = err {
                 failure(err.localizedDescription)
             } else {
                 completion()
             }
         }
+    }
+    
+    func fetchUserInfo() {
+        
     }
 }

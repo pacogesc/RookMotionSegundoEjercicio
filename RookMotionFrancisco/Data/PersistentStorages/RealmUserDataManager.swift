@@ -8,13 +8,28 @@
 import Foundation
 import RealmSwift
 
-enum StateMessages {
-    case update
-    case create
+protocol RealmManagerDelegate {
+    func dataDeleted()
+    func dataStored()
 }
 
 class MessagesManager: NSObject {
     
     fileprivate let realm = try! Realm()
+    fileprivate let firebaseManager = FireBaseManager()
+    
+    func storeUserData() {
+        //firebaseManager.
+    }
+    
+    func deleteUserData() {
+        do {
+            try realm.write {
+                realm.deleteAll()
+            }
+        } catch {
+            print("Error al borrar la basede datos")
+        }
+    }
     
 }

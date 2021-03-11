@@ -7,6 +7,10 @@
 
 import Foundation
 
+protocol MenuViewModelDelegate {
+    func sessionClosed()
+}
+
 class MenuViewModel {
     
     //MARK: - Properties

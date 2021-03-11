@@ -36,6 +36,9 @@ class HomeCell: UICollectionViewCell {
     //MARK: - Helpers
     
     private func setupViewComponents() {
+        backgroundColor = .white
+        setShadow()
+        
         addSubview(imageView)
         addSubview(titleLabel)
         addSubview(descriptionLabel)
@@ -45,6 +48,16 @@ class HomeCell: UICollectionViewCell {
         
         titleLabel.anchor(top: topAnchor, leading: imageView.trailingAnchor, bottom: nil, trailing: trailingAnchor, padding: .init(top: 6, left: 6, bottom: 0, right: 6))
         descriptionLabel.anchor(top: titleLabel.bottomAnchor, leading: imageView.trailingAnchor, bottom: nil, trailing: trailingAnchor, padding: .init(top: 8, left: 6, bottom: 0, right: 6))
+    }
+    
+    func setShadow() {
+        layer.borderColor = UIColor.lightGray.cgColor
+        layer.cornerRadius = 15
+        layer.shadowColor = UIColor.lightGray.cgColor
+        layer.shadowOpacity = 1
+        layer.shadowOffset = .zero
+        layer.shadowRadius = 1
+        layer.masksToBounds = false
     }
     
     //MARK: - Selectors

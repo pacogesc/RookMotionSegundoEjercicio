@@ -21,7 +21,7 @@ class LoginController: UIViewController {
     let passwordTextInput = TextInput(placeHolder: "Contraseña", keyboardType: .emailAddress, isSecureTextEntry: true, backgroundColor: .white)
     
     lazy var loginButton = UIButton(title: "Iniciar", titleColor: .white, font: .boldSystemFont(ofSize: 16), backgroundColor: .clear, target: self, action: #selector(loginTapped))
-    lazy var siginButton = UIButton(title: "Únete", titleColor: .black, font: .boldSystemFont(ofSize: 14), backgroundColor: .clear, target: self, action: #selector(siginTapped))
+    lazy var siginButton = UIButton(title: "Únete", titleColor: .white, font: .boldSystemFont(ofSize: 16), backgroundColor: .clear, target: self, action: #selector(siginTapped))
     
     private let loginViewModel = LoginViewModel()
     
@@ -80,7 +80,8 @@ class LoginController: UIViewController {
         loginButton.anchor(top: passwordTextInput.bottomAnchor, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 32, left: 0, bottom: 0, right: 0), size: .init(width: 200, height: 50))
         loginButton.centerXToSuperview()
         
-        siginButton.anchor(top: loginButton.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 18, left: 0, bottom: 0, right: 0), size: .init(width: 200, height: 50))
+        siginButton.anchor(top: loginButton.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 18, left: 18, bottom: 0, right: 0))
+        siginButton.withHeight(50)
     }
     
     //MARK: - Selectors
