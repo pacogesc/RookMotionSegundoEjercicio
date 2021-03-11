@@ -15,7 +15,7 @@ struct UserRegister {
     let lastName: String
 }
 
-struct UserStore: Encodable {
+struct UserStore: Codable {
     let email: String
     let name: String
     let lastName: String

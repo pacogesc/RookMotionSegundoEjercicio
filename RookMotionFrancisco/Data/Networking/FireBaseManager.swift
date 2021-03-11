@@ -43,7 +43,25 @@ class FireBaseManager {
         }
     }
     
-    func fetchUserInfo() {
-        
+    func fetchUserInfo(userString: String, completion: @escaping((UserStore?, Error?) -> Void)) {
+        let docRef = db.collection(Constants.FStore.collectionName).document(userString)
+        docRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+                if let dataDescription = document.data() as? [String: String] {
+                    do {
+                        let jsonData = try JSONEncoder().encode(dataDescription)
+                        let userInfo = try JSONDecoder().decode(UserStore.self, from: jsonData)
+                        completion(userInfo, nil)
+                    } catch {
+                        completion(nil, error)
+                        print("Error \(error)")
+                    }
+                } else {
+                    completion(nil, error)
+                }
+            } else {
+                completion(nil, error)
+            }
+        }
     }
 }

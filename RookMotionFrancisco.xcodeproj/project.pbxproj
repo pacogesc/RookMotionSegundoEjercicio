@@ -12,6 +12,7 @@
 		AD7EF90325F8A26F00848D73 /* UserRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7EF90225F8A26F00848D73 /* UserRealmModel.swift */; };
 		AD7EF90A25F9C4D400848D73 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7EF90925F9C4D400848D73 /* MenuViewModel.swift */; };
 		AD7EF90D25F9D12700848D73 /* UIViewExtensionMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7EF90C25F9D12700848D73 /* UIViewExtensionMenu.swift */; };
+		AD7EF92B25F9FAB500848D73 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7EF92A25F9FAB500848D73 /* KeychainManager.swift */; };
 		ADA399C325F41073003DC0CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA399C225F41073003DC0CD /* AppDelegate.swift */; };
 		ADA399C525F41073003DC0CD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA399C425F41073003DC0CD /* SceneDelegate.swift */; };
 		ADA399C725F41073003DC0CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA399C625F41073003DC0CD /* ViewController.swift */; };
@@ -61,6 +62,7 @@
 		AD7EF90225F8A26F00848D73 /* UserRealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRealmModel.swift; sourceTree = "<group>"; };
 		AD7EF90925F9C4D400848D73 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
 		AD7EF90C25F9D12700848D73 /* UIViewExtensionMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensionMenu.swift; sourceTree = "<group>"; };
+		AD7EF92A25F9FAB500848D73 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		ADA399BF25F41073003DC0CD /* RookMotionFrancisco.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RookMotionFrancisco.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADA399C225F41073003DC0CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADA399C425F41073003DC0CD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 		AD7EF8E225F89F1200848D73 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				AD7EF92825F9FA9600848D73 /* KeychainManager */,
 				AD7EF8E425F89F1700848D73 /* PersistentStorages */,
 				ADA39A6025F577D5003DC0CD /* Networking */,
 			);
@@ -156,6 +159,14 @@
 				AD7EF8E625F89F4C00848D73 /* RealmUserDataManager.swift */,
 			);
 			path = PersistentStorages;
+			sourceTree = "<group>";
+		};
+		AD7EF92825F9FA9600848D73 /* KeychainManager */ = {
+			isa = PBXGroup;
+			children = (
+				AD7EF92A25F9FAB500848D73 /* KeychainManager.swift */,
+			);
+			path = KeychainManager;
 			sourceTree = "<group>";
 		};
 		ADA399B625F41073003DC0CD = {
@@ -516,6 +527,7 @@
 				ADA39AE325F727A8003DC0CD /* HomeController.swift in Sources */,
 				AD7EF8E725F89F4C00848D73 /* RealmUserDataManager.swift in Sources */,
 				ADA399C525F41073003DC0CD /* SceneDelegate.swift in Sources */,
+				AD7EF92B25F9FAB500848D73 /* KeychainManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

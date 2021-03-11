@@ -8,11 +8,14 @@
 import UIKit
 import Firebase
 import IQKeyboardManagerSwift
+import RealmSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    lazy var realm: Realm = {
+        return try! Realm()
+    }()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -20,6 +23,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let db = Firestore.firestore()
         print(db)
+        
+        let version = try? schemaVersionAtURL(Realm.Configuration.defaultConfiguration.fileURL!)
+        let vesionToMigrate = version ?? 1
+        let config = Realm.Configuration(
+            schemaVersion: vesionToMigrate + 1,
+            migrationBlock: { migration, oldSchemaVersion in
+                if (oldSchemaVersion < vesionToMigrate) {
+                }
+            })
+        Realm.Configuration.defaultConfiguration = config
+        realm = try! Realm()
         
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.enableAutoToolbar = false

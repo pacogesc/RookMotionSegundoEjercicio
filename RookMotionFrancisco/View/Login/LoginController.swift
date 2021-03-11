@@ -24,6 +24,7 @@ class LoginController: UIViewController {
     lazy var siginButton = UIButton(title: "Únete", titleColor: .white, font: .boldSystemFont(ofSize: 16), backgroundColor: .clear, target: self, action: #selector(siginTapped))
     
     private let loginViewModel = LoginViewModel()
+    fileprivate let realmManager = RealmManager()
     
     let hud = JGProgressHUD(style: .dark)
     
@@ -33,6 +34,7 @@ class LoginController: UIViewController {
         super.viewDidLoad()
         setupViewComponents()
         loginViewModel.loginViewModelDelegate = self
+        realmManager.realmManagerDelegate = self
         let loggedIn = UserDefaults.standard.bool(forKey: Constants.DefaultsConstants.loggedIn)
         if loggedIn {
             navigationController?.pushViewController(HomeController(), animated: true)
@@ -96,6 +98,23 @@ class LoginController: UIViewController {
 
 }
 
+extension LoginController: RealmManagerDelegate {
+    func dataDeleted() {
+    }
+    
+    func dataStored() {
+    }
+    
+    func error(_ messeage: String) {
+        print(messeage)
+    }
+    
+    func dataUser(user: UserStore) {
+    }
+    
+    
+}
+
 
 extension LoginController: LoginViewModelDelegate, Alertable {
     func success(user: String, pass: String) {
@@ -104,6 +123,7 @@ extension LoginController: LoginViewModelDelegate, Alertable {
         keychain.set(user, forKey: Constants.KeychainConstants.user)
         keychain.set(pass, forKey: Constants.KeychainConstants.password)
         UserDefaults.standard.setValue(true, forKey: Constants.DefaultsConstants.loggedIn)
+        realmManager.storeUserData()
         navigationController?.pushViewController(HomeController(), animated: true)
     }
     
@@ -116,6 +136,4 @@ extension LoginController: LoginViewModelDelegate, Alertable {
         hud.indicatorView = JGProgressHUDIndeterminateIndicatorView()
         hud.show(in: view)
     }
-    
-    
 }

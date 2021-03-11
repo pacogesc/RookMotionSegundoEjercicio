@@ -15,8 +15,17 @@ class MenuViewModel {
     
     //MARK: - Properties
     
-    //MARK: - Init
+    let realmManager = RealmManager()
+    let keychainManager = KeychainManager()
+    var menuDelegate: MenuViewModelDelegate?
     
     //MARK: - Helpers
+    
+    func deleteData() {
+        realmManager.deleteUserData()
+        keychainManager.deleteData()
+        UserDefaults.standard.removeObject(forKey: Constants.DefaultsConstants.loggedIn)
+        menuDelegate?.sessionClosed()
+    }
     
 }

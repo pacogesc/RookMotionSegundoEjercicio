@@ -10,6 +10,7 @@ import UIKit
 class MenuController: UINavigationController {
     
     //MARK: - Properties
+    
     private let viewController: UIViewController
     var menuWidth: CGFloat = UIScreen.main.bounds.width * 0.33
     lazy var dismissButton = UIButton(title: "", titleColor: .clear, font: .systemFont(ofSize: 1), backgroundColor: .clear, target: self, action: #selector(dismissTapped))
@@ -27,7 +28,9 @@ class MenuController: UINavigationController {
         return view
     }()
     
-    let closeSessionButton = UIButton(title: "Cerra sesión", titleColor: .black, font: .systemFont(ofSize: 14), backgroundColor: .clear, target: self, action: #selector(closeTapped))
+    lazy var closeSessionButton = UIButton(title: "Cerra sesión", titleColor: .black, font: .boldSystemFont(ofSize: 16), backgroundColor: .clear, target: self, action: #selector(closeTapped))
+    
+    let menuViewModel = MenuViewModel()
     
     //MARK: - Init
     
@@ -49,6 +52,7 @@ class MenuController: UINavigationController {
         UIView.animate(withDuration: 0.8, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0, options: .curveEaseOut, animations:({ [unowned self] in
             self.containerView.frame.origin.x =  self.view.frame.size.width + self.menuWidth
         }), completion: nil)
+        menuViewModel.menuDelegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -58,8 +62,10 @@ class MenuController: UINavigationController {
     
     //MARK: - Helpers
     private func setupView() {
-        viewController.view.backgroundColor = .red
         menuView.addSubview(viewController.view)
+        menuView.addSubview(closeSessionButton)
+        closeSessionButton.anchor(top: nil, leading: menuView.leadingAnchor, bottom: menuView.bottomAnchor, trailing: menuView.trailingAnchor, padding: .init(top: 0, left: 12, bottom: 24, right: 12))
+        closeSessionButton.withHeight(40)
         viewController.view.fillSuperview()
         containerView.edgeTo(view)
         menuView.pinMenuTo(view, with: menuWidth)
@@ -74,7 +80,16 @@ class MenuController: UINavigationController {
     }
     
     @objc private func closeTapped() {
-        
+        menuViewModel.deleteData()
     }
 
+}
+
+extension MenuController: MenuViewModelDelegate {
+    func sessionClosed() {
+        let loginController = LoginController()
+        let navController = UINavigationController(rootViewController: loginController)
+        let window = UIApplication.shared.windows.filter { $0.isKeyWindow }.first!
+        window.rootViewController = navController
+    }
 }
