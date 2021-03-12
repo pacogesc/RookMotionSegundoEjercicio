@@ -39,6 +39,7 @@ class DetailWebViewController: UIViewController {
         super.viewWillAppear(animated)
         setupNavBar(title: "Noticia", largeTitle: true)
         navigationController?.setNavigationBarHidden(false, animated: false)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "line.horizontal.3")!, style: .plain, target: self, action: #selector(menuButtonTapped))
     }
     
     //MARK: - Helpers
@@ -55,6 +56,11 @@ class DetailWebViewController: UIViewController {
     }
     
     //MARK: - Selectors
+    
+    @objc fileprivate func menuButtonTapped() {
+        let menu = MenuController(rootViewController: UIViewController())
+        self.present(menu, animated: false)
+    }
 
 }
 
