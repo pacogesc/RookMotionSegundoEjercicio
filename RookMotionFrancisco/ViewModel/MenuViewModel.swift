@@ -9,6 +9,7 @@ import Foundation
 
 protocol MenuViewModelDelegate {
     func sessionClosed()
+    func dataUser(_ user: UserStore)
 }
 
 class MenuViewModel {
@@ -19,6 +20,11 @@ class MenuViewModel {
     let keychainManager = KeychainManager()
     var menuDelegate: MenuViewModelDelegate?
     
+    //MARK: - Init
+    init() {
+        realmManager.realmManagerDelegate = self
+    }
+    
     //MARK: - Helpers
     
     func deleteData() {
@@ -27,5 +33,26 @@ class MenuViewModel {
         UserDefaults.standard.removeObject(forKey: Constants.DefaultsConstants.loggedIn)
         menuDelegate?.sessionClosed()
     }
+    
+    func getUserData() {
+        realmManager.getUserData()
+    }
+    
+}
+
+extension MenuViewModel: RealmManagerDelegate {
+    func dataDeleted() {
+    }
+    
+    func dataStored() {
+    }
+    
+    func error(_ messeage: String) {
+    }
+    
+    func dataUser(user: UserStore) {
+        menuDelegate?.dataUser(user)
+    }
+    
     
 }

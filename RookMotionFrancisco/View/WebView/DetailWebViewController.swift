@@ -7,6 +7,7 @@
 
 import UIKit
 import WebKit
+import JGProgressHUD
 
 class DetailWebViewController: UIViewController {
 
@@ -14,6 +15,7 @@ class DetailWebViewController: UIViewController {
     
     private let webView = WKWebView(frame: .zero)
     let newViewModel: NewsViewModel
+    let hud = JGProgressHUD(style: .dark)
     
     //MARK: - Init
     
@@ -43,6 +45,7 @@ class DetailWebViewController: UIViewController {
     
     private func setupView() {
         view.backgroundColor = .white
+        hud.show(in: webView)
         webView.navigationDelegate = self
         webView.configuration.preferences.setValue(true, forKey: "allowFileAccessFromFileURLs")
         
@@ -57,6 +60,7 @@ class DetailWebViewController: UIViewController {
 
 extension DetailWebViewController: WKNavigationDelegate{
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        hud.dismiss()
         print(webView.url ?? "")
     }
     

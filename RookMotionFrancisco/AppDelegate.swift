@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let version = try? schemaVersionAtURL(Realm.Configuration.defaultConfiguration.fileURL!)
         let vesionToMigrate = version ?? 1
         let config = Realm.Configuration(
-            schemaVersion: vesionToMigrate + 1,
+            schemaVersion: vesionToMigrate,
             migrationBlock: { migration, oldSchemaVersion in
                 if (oldSchemaVersion < vesionToMigrate) {
                 }
